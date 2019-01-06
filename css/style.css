@@ -1,0 +1,519 @@
+@font-face {
+  font-weight: 800;
+  font-family: "Gilroy";
+  font-style: normal;
+
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Gilroy";
+  font-style: normal;
+
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
+}
+body {
+  min-width: 1200px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  margin:0;
+  padding:0;
+  padding-top:40px;
+  color: #464646;
+  background-color: #ffffff;
+  letter-spacing: 0.01em;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.2;
+  font-size:15px;
+}
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  color:black;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.container {
+  width:1040px;
+  margin:0 auto;
+}
+/*----------------------ХЕДЕР------------------------*/
+.main-header {
+  background-color: #f7e296;
+  position: relative;
+  width:1160px;
+  margin:0 auto;
+}
+.main-logo {
+  margin:0;
+  padding:0;
+  position: absolute;
+  margin-top:-24px;
+
+}
+.main-logo--link {
+  color:#000;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size:48px;
+  line-height: 48px;
+}
+.main-logo--link:hover,
+.main-logo--link:focus {
+  opacity: 0.6;
+}
+.main-logo--link:active {
+  opacity: 0.3;
+}
+.user-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-nav--search {
+  margin-top:36px;
+  margin-right: auto;
+  position: relative;
+}
+.user-nav--search::before {
+  content: "";
+  position: absolute;
+  width:18px;
+  height: 18px;
+  background:url('../img/search.svg') center no-repeat;
+  left:2px;
+  top:15px;
+}
+.search-field {
+  width:355px;
+  border:none;
+  background-color: #f7e296;
+  font-size:15px;
+  line-height: 30px;
+  padding-left: 40px;
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-right:10px;
+  border-bottom:2px solid transparent;
+}
+.search-field:hover::placeholder {
+  opacity: 0.5;
+}
+.search-field:focus,
+.search-field:active {
+  border-bottom:2px solid black;
+}
+.search-field:focus ~ .search-button {
+  display: inline-block;
+}
+.search-button {
+  font-size:15px;
+  line-height: 30px;
+  padding:8px 22px;
+  outline:2px solid black;
+  border:none;
+  background-color:inherit;
+  margin-left:-5px;
+  display:none;
+}
+.search-button:focus,
+.search-button:hover {
+  background-color: black;
+  color:white;
+}
+.search-button:active {
+  color:#434343;
+  display: inline-block;
+}
+.user-nav--item {
+  margin-top:44px;
+}
+.user-nav--link {
+  color:black;
+  padding-left: 27px;
+  position: relative;
+  font-weight: 300;
+}
+.compare-link {
+  margin-right: 36px;
+}
+.entrance-link {
+  margin-right: 210px;
+}
+.cart-link::before,
+.compare-link::before,
+.entrance-link::before  {
+  position: absolute;
+  content: "";
+  width:13px;
+  height:13px;
+  left:0;
+}
+.cart-link::before {
+  background: url('../img/cart.svg') center no-repeat;
+  top:4px;
+  left:5.5px;
+}
+.compare-link::before {
+  background: url('../img/compare.svg') center no-repeat;
+  top:5px;
+  left:4px;
+}
+.entrance-link::before {
+  background: url('../img/user.svg') center no-repeat;
+  top:4px;
+}
+.user-nav--link:focus,
+.user-nav--link:hover {
+  opacity: 0.6;
+}
+.user-nav--link:active {
+  opacity: 0.2;
+}
+.main-nav {
+  display:flex;
+  flex-wrap: wrap;
+  margin-top:27px;
+  padding-bottom:160px;
+}
+.main-nav--item:first-child {
+  margin-right: 180px;
+  position: relative;
+}
+.main-nav--item:nth-child(2n) {
+  margin-left: auto;
+  margin-right: 35px;
+}
+.main-nav--item:nth-child(4n) {
+  margin-right: -5px;
+}
+.main-nav--link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color:black;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main-nav--link:hover,
+.main-nav--link:focus {
+  opacity: 0.6;
+}
+.main-nav--link:active {
+  opacity: 0.2;
+}
+.main-catalog-link {
+  padding-right: 32px;
+  position: relative;
+}
+.main-nav--item svg  {
+  position: absolute;
+  width:16px;
+  height:16px;
+  right:5px;
+  top:6px;
+  opacity: 0.3;
+}
+.main-nav--sub-menu {
+  display: none;
+}
+.sub-menu--link {
+  font-size:15px;
+  line-height: 36px;
+  color:black;
+}
+/*----------------------СЛАЙДЕР------------------------*/
+.slider-top span {
+  font-size: 179px;
+  line-height: 179px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  color:black;
+}
+.slider-top h4 {
+  font-size: 47px;
+  line-height: 56px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  color:black;
+  margin: 0;
+  padding:0;
+}
+.slider-top p {
+  padding:0;
+  margin:0;
+}
+.slider-table-col {
+  font-size:13px;
+  line-height: 20px;
+}
+.slider-table-head {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size:36px;
+  line-height: 48px;
+}
+/*----------------------ПОПУЛЯРНЫЕ ТОВАРЫ------------------------*/
+.popular-image {
+  background-color: #f7e296;
+  margin:0;
+  padding:0;
+}
+.popular-good {
+  font-family: "Gilroy", Arial, sans-serif;
+  color:black;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
+.popular-goods--link:hover > .popular-image,
+.popular-goods--link:focus > .popular-image,
+.popular-goods--link:active > .popular-image {
+  background-color: #f0c52e;
+}
+.popular-goods--link:active > .popular-image img,
+.popular-goods--link:active > .popular-good {
+  opacity: 0.3;
+}
+/*----------------------СЕРВИС БЛОК------------------------*/
+.services-wrapper {
+  background-color: #e5e5e5;
+}
+.service-slider-control {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  font-size:18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color:black;
+}
+.service-slider-title {
+  margin: 0;
+  padding:0;
+  font-size:47px;
+  line-height: 47px;
+  color:black;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+}
+/*----------------------ПРОИЗВОДИТЕЛИ------------------------*/
+.vendor-link img {
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+.vendor-link:hover img,
+.vendor-link:focus img,
+.vendor-link:active img {
+  filter: none;
+  opacity: 1;
+}
+/*----------------------БЛОК О НАС------------------------*/
+.about-us-title {
+  padding:0;
+  margin:0;
+  font-size:47px;
+  line-height:48px;
+  font-weight:800;
+  font-family: "Gilroy", Arial, sans-serif;
+  color:black;
+}
+.about-us-txt {
+  font-family: "Myriad pro", Arial, sans-serif;
+  margin:0;
+  padding:0;
+}
+.about-us-partner {
+  font-size:16px;
+  line-height:40px;
+  color:black;
+  font-weight: 400;
+  font-family: "Myriad pro", Arial, sans-serif;
+}
+/*----------------------ФУТЕР------------------------*/
+.footer-wrapper {
+  background-color: #464646;
+}
+.footer-logo {
+  margin:0;
+  padding:0;
+}
+.footer-logo--link {
+  color:#ffc600;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size:48px;
+  line-height: 48px;
+}
+.footer-user-link {
+  color:white;
+}
+.footer-offer-link {
+  color:#fff;
+  font-size: 18px;
+  font-weight: 24px;
+  font-weight:800;
+  font-family: "Gilroy", Arial, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+/*----------------------КАТАЛОГ------------------------*/
+.catalog-title {
+  margin:0;
+  padding:0;
+  font-size:47px;
+  line-height: 48px;
+  color:black;
+  font-family: "Gilroy", Arial, sans-serif;
+}
+.breadcumb {
+  font-family: inherit;
+  font-size:14px;
+  line-height: 24px;
+  color:inherit;
+}
+/*----------------------ФОРМЫ КАТАЛОГА------------------------*/
+
+.form-title-wrapper {
+  background-color: #dbdbdb;
+}
+.form-wrapper {
+  background-color: #efefef;
+}
+.interface-checkbox ,
+.interface-radio {
+  font-size:14px;
+  line-height: 40px;
+  color:black;
+  font-family: inherit;
+  font-weight: 400;
+}
+.filtes-title {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color:black;
+}
+.price-controls input {
+  font-size:14px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  opacity: 0.3;
+}
+.price-form,
+.bluetooth-form,
+.color-form {
+  margin:0;
+  padding:0;
+  border:none;
+}
+.fieldset-title {
+  font-size:18px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  color:black;
+}
+.filter-button {
+  background-color: none;
+  border:none;
+}
+/*----------------------КАТАЛОГ------------------------*/
+.sorter-item h3 {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color:black;
+}
+.sorter-link {
+  color:black;
+  font-size:14px;
+  line-height: 18px;
+  opacity: 0.3;
+  font-weight: 400;
+}
+.sorter-link.active {
+  opacity:1;
+}
+.sorter-link--arrow {
+  font-size: 0;
+}
+.catalog-image-wrapper {
+  margin:0;
+  padding:0;
+}
+.product-text {
+  margin:0;
+  padding:0;
+}
+.product-text b {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+}
+.product-text span {
+  font-size:16px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+}
+.paginator {
+  background-color: #ebebeb;
+}
+.paginator-item a {
+  font-size:16px;
+  line-height: 24px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color:black;
+  text-transform: uppercase;
+}
+.paginator-page {
+  opacity: 0.3;
+}
+.paginator-page.active {
+  opacity: 1;
+}
