@@ -386,7 +386,7 @@ textarea::placeholder {
   height:2px;
   border-radius: 50%;
   border:1px solid #000;
-  top:3.5px;
+  top:3px;
   right:3px;
 }
 #slide-1:checked ~ .slider-inner .slider-1,
