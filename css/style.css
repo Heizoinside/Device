@@ -322,18 +322,18 @@ textarea::placeholder {
  .sliders {
   position: relative;
 }
+.slider-inner {
+  width:100%;
+  height: 370px;
+  position: relative;
+}
 .slider {
   position: absolute;
   display:none;
   justify-content: space-between;
   top:-112px;
-  width:100%;
+  width: 100%;
 
-}
-.slider-inner {
-  width:100%;
-  height: 370px;
-  position: relative;
 }
 .slider-content {
   display:flex;
@@ -362,7 +362,7 @@ textarea::placeholder {
   position: absolute;
   right:27px;
   bottom:127px;
-  z-index: 111;
+  z-index: 99;
   display: inline-flex;
   width:470px;
   justify-content: space-between;
@@ -401,7 +401,7 @@ textarea::placeholder {
 .slider-content {
   width:500px;
   position: relative;
-  z-index: 99;
+  z-index: 2;
 }
 .slider-number {
   font-size: 179px;
@@ -412,6 +412,7 @@ textarea::placeholder {
   position: absolute;
   right:-10px;
   top:-12px;
+  z-index: 1;
 }
 .slider-stick {
   content: "";
@@ -458,10 +459,49 @@ textarea::placeholder {
   text-align: left;
 }
 /*----------------------ПОПУЛЯРНЫЕ ТОВАРЫ------------------------*/
+.popular-goods {
+  width:1160px;
+  margin:0 auto;
+  margin-top: 110px;
+}
+.popular-goods--list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.popular-goods--item {
+  width:160px;
+}
 .popular-image {
   background-color: #f7e296;
   margin:0;
   padding:0;
+  width:160px;
+  height:160px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.popular-image-vr {
+  padding-top:52px;
+}
+.popular-image-selfie {
+  padding-top:41px;
+}
+.popular-image-cameras {
+  padding-top:38px;
+  padding-left:7px;
+}
+.popular-image-fitness {
+  padding-top:50px;
+  padding-left:1px;
+}
+.popular-image-watch {
+  padding-top:32px;
+  padding-left:5px;
+}
+.popular-image-copters {
+  padding-top:50px;
+  padding-right: 2px;
 }
 .popular-good {
   font-family: "Gilroy", Arial, sans-serif;
@@ -469,6 +509,7 @@ textarea::placeholder {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
+  margin-top:32px;
 }
 .popular-goods--link:hover > .popular-image,
 .popular-goods--link:focus > .popular-image,
