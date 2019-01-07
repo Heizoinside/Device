@@ -98,6 +98,10 @@ textarea::placeholder {
   width:1040px;
   margin:0 auto;
 }
+.container-2 {
+  width:1160px;
+  margin:0 auto;
+}
 /*----------------------ХЕДЕР------------------------*/
 .main-header {
   background-color: #f7e296;
@@ -520,18 +524,60 @@ textarea::placeholder {
 .popular-goods--link:active > .popular-good {
   opacity: 0.3;
 }
-/*----------------------СЕРВИС БЛОК------------------------*/
+/*----------------------СЛАЙДЕР СЕРВИСОВ------------------------*/
 .services-wrapper {
   background-color: #e5e5e5;
+  margin-top:165px;
+  height: 288px;
+  position: relative;
 }
-.service-slider-control {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  font-size:18px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color:black;
+.services {
+  display:flex;
+  justify-content: space-between;
+  position: absolute;
+  top:-100px;
+}
+.service-slider {
+  display:none;
+  padding-top:72px;
+  padding-left: 117px;
+  position: relative;
+  width:759px;
+}
+.slider-delivery::before {
+  content: '';
+  position: absolute;
+  width:136px;
+  height: 164px;
+  right:65px;
+  bottom:-8px;
+  background:url('../img/delivery.png') center no-repeat;
+}
+.slider-warranty::before {
+  content: '';
+  position: absolute;
+  width:171px;
+  height: 195px;
+  right:45px;
+  bottom:-10px;
+  background:url('../img/warranty.png') center no-repeat;
+}
+.slider-credit::before {
+  content: '';
+  position: absolute;
+  width:156px;
+  height: 188px;
+  right:70px;
+  bottom:-10px;
+  background:url('../img/credit.png') center no-repeat;
+}
+.services-slider-controls {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  justify-content: center;
+  border-right:7px solid black;
+  padding-right: 117px;
 }
 .service-slider-title {
   margin: 0;
@@ -541,6 +587,72 @@ textarea::placeholder {
   color:black;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.service-slider-txt {
+  padding:0;
+  margin: 0;
+  padding-top:32px;
+  width:460px;
+}
+/*----------------------ПЕРЕКЛЮЧАТЕЛЬ СЛАЙДЕРА СЕРВИСОВ------------------------*/
+#service-slide-1:checked ~ .services-slider--inner .slider-delivery,
+#service-slide-2:checked ~ .services-slider--inner .slider-warranty,
+#service-slide-3:checked ~ .services-slider--inner .slider-credit {
+  display:block;
+}
+.service-slider-control {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  width:160px;
+  margin-top:13px;
+  margin-bottom: 7px;
+}
+.service-slider-control::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 8px;
+  margin-top: -4.5px;
+  background-color: #f0c52e;
+  z-index: -1;
+  top: 50%;
+  left: -2px;
+}
+.service-slider-control:hover::before {
+  top: 2px;
+  left:0;
+  height: 40px;
+  margin: 0;
+  transition: all 0.3s linear;
+}
+#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"],
+#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"],
+#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"] {
+  color:#f7e184;
+}
+#service-slide-1:checked ~ .services-slider-controls label[for="service-slide-1"]::before,
+#service-slide-2:checked ~ .services-slider-controls label[for="service-slide-2"]::before,
+#service-slide-3:checked ~ .services-slider-controls label[for="service-slide-3"]::before {
+  background-color: #000;
+  color:#f7e184;
+  width:280px;
+  height: 40px;
+  margin: 0;
+  top:2px;
+  left:0;
 }
 /*----------------------ПРОИЗВОДИТЕЛИ------------------------*/
 .vendor-link img {
