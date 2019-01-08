@@ -749,6 +749,10 @@ textarea::placeholder {
   margin:0;
   padding-bottom: 40px;
 }
+.map-link {
+  height: 222px;
+  width:560px;
+}
 .write-us-btn {
   width:260px;
   margin-top:58px;
