@@ -752,10 +752,10 @@ textarea::placeholder {
 .map-link {
   height: 222px;
   width:560px;
+  margin-bottom:58px;
 }
 .write-us-btn {
   width:260px;
-  margin-top:58px;
 }
 /*----------------------ФУТЕР------------------------*/
 .footer-wrapper {
