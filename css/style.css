@@ -466,7 +466,7 @@ textarea::placeholder {
 .popular-goods {
   width:1160px;
   margin:0 auto;
-  margin-top: 110px;
+  padding-top: 110px;
 }
 .popular-goods--list {
   display: flex;
@@ -655,6 +655,14 @@ textarea::placeholder {
   left:0;
 }
 /*----------------------ПРОИЗВОДИТЕЛИ------------------------*/
+.vendors {
+  padding-top:94px;
+}
+.vendors-list {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
 .vendor-link img {
   filter: grayscale(100%);
   opacity: 0.2;
@@ -666,7 +674,16 @@ textarea::placeholder {
   opacity: 1;
 }
 /*----------------------БЛОК О НАС------------------------*/
-.about-us-title {
+.about-us-contacts {
+  display: flex;
+  justify-content: space-between;
+  padding-top:135px;
+  padding-bottom: 79px;
+}
+.about-us {
+  width:490px;
+}
+.ac-title {
   padding:0;
   margin:0;
   font-size:47px;
@@ -674,18 +691,67 @@ textarea::placeholder {
   font-weight:800;
   font-family: "Gilroy", Arial, sans-serif;
   color:black;
+  position: relative;
+}
+.about-us-title {
+  padding-bottom: 43px;
+}
+.ac-title::before {
+  content: "";
+  position: absolute;
+  width:80px;
+  height:7px;
+  background-color: #000;
+  top:-52px;
+  left:0;
 }
 .about-us-txt {
-  font-family: "Myriad pro", Arial, sans-serif;
   margin:0;
   padding:0;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+.us-partners {
+  padding-top:21px;
+  padding-bottom: 37px;
 }
 .about-us-partner {
   font-size:16px;
   line-height:40px;
   color:black;
-  font-weight: 400;
-  font-family: "Myriad pro", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  display: block;
+  padding-left: 33px;
+  position: relative;
+}
+.about-us-partner::before {
+  content: "";
+  position: absolute;
+  width:4px;
+  height:4px;
+  border-radius: 50%;
+  border:3px solid #e5e5e5;
+  left:0;
+  top:16px;
+}
+.about-us-btn {
+  width:260px;
+}
+.contacts {
+  width:560px;
+}
+.contacts-title {
+  padding-bottom: 43px;
+}
+.contact-txt {
+  padding: 0;
+  margin:0;
+  padding-bottom: 40px;
+}
+.write-us-btn {
+  width:260px;
+  margin-top:58px;
 }
 /*----------------------ФУТЕР------------------------*/
 .footer-wrapper {
@@ -694,6 +760,9 @@ textarea::placeholder {
 .footer-logo {
   margin:0;
   padding:0;
+  margin-top:-3px;
+  margin-left: -2px;
+  letter-spacing: 0.01em;
 }
 .footer-logo--link {
   color:#ffc600;
@@ -702,8 +771,87 @@ textarea::placeholder {
   font-size:48px;
   line-height: 48px;
 }
+.footer-logo--link:hover,
+.footer-logo--link:focus {
+  opacity: 0.7;
+}
+.footer-logo--link:active {
+  opacity: 0.3;
+}
+.footer-top {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top:62px;
+}
+.footer-user-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-user-item {
+  margin-left: 35px;
+}
 .footer-user-link {
   color:white;
+  padding-left: 28px;
+  position: relative;
+  opacity: 0.7;
+}
+.footer-user-link:hover,
+.footer-user-link:focus {
+  opacity: 1;
+}
+.footer-user-link:active {
+  opacity: 0.3;
+}
+.footer-user-enter::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  background: url('../img/user-footer.svg') center no-repeat;
+  left: 2px;
+  top:4px;
+}
+.footer-user-compare::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url('../img/compare-footer.svg') center no-repeat;
+  left: 8px;
+  top:6px;
+}
+.footer-user-cart::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url('../img/cart-footer.svg') center no-repeat;
+  left: 6px;
+  top:4px;
+}
+.footer-center {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top:23px;
+}
+.footer-adress,
+.footer-phone {
+  color:#fff;
+  padding:0;
+  margin:0;
+  font-weight: 300;
+  letter-spacing: 0.001em;
+}
+.footer-offers {
+  display:flex;
+  flex-wrap: wrap;
+  width:440px;
+  justify-content: space-between;
+  margin-right:38px;
+  padding-top:2px;
 }
 .footer-offer-link {
   color:#fff;
@@ -713,6 +861,84 @@ textarea::placeholder {
   font-family: "Gilroy", Arial, sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.footer-offer-link:hover,
+.footer-offer-link:focus {
+  opacity: 0.7;
+}
+.footer-offer-link:active {
+  opacity: 0.3;
+}
+.footer-bottom {
+  display:flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding-top:52px;
+  padding-bottom: 60px;
+}
+.footer-line {
+  height: 7px;
+  width:80px;
+  background-color: #ffc600;
+  display: inline-block;
+
+}
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  width:141px;
+  margin-right: 54px;
+}
+.footer-social {
+  font-size: 0;
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  opacity: 0.6;
+}
+.social-fb::before {
+  content: "";
+  position: absolute;
+  width:32px;
+  height:32px;
+  background-image: url('../img/fb.svg');
+}
+.social-in::before {
+  content: "";
+  position: absolute;
+  width:32px;
+  height:32px;
+  background: url('../img/in.svg') center no-repeat;
+}
+.social-tw::before {
+  content: "";
+  position: absolute;
+  width:32px;
+  height:32px;
+  background: url('../img/twitter.svg') center no-repeat;
+}
+.footer-social:hover,
+.footer-social:focus {
+  opacity: 1;
+}
+.footer-social:active {
+  opacity: 0.3;
+}
+.copyright-logo {
+  padding-top:7px;
+  cursor: pointer;
+}
+.copyright-logo:focus,
+.copyright-logo:hover {
+  opacity: 0.7;
+}
+.copyright-logo:active {
+  opacity: 0.3;
 }
 /*----------------------КАТАЛОГ------------------------*/
 .catalog-title {
