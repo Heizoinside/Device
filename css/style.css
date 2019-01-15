@@ -28,6 +28,7 @@ body {
   background-color: #ffffff;
   letter-spacing: 0.01em;
   overflow-x: hidden;
+  position: relative;
 }
 .button {
   position: relative;
@@ -95,7 +96,7 @@ img {
 }
 input::placeholder,
 textarea::placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   font-size:15px;
 }
 .container {
@@ -165,7 +166,8 @@ textarea::placeholder {
   padding-right:10px;
   border-bottom:2px solid transparent;
 }
-.search-field:hover::placeholder {
+input:hover::placeholder,
+textarea:hover::placeholder {
   opacity: 0.5;
 }
 .search-field:focus,
@@ -784,10 +786,10 @@ textarea::placeholder {
 .map-link {
   height: 222px;
   width:560px;
-  margin-bottom:58px;
 }
 .write-us-btn {
   width:260px;
+  margin-top:58px;
 }
 /*----------------------ФУТЕР------------------------*/
 .footer-wrapper {
@@ -1485,5 +1487,106 @@ textarea::placeholder {
 }
 .paginator-forward {
   margin-left:auto;
-
+}
+/*----------------------ПОПАПЫ------------------------*/
+.map-popup {
+  height:559px;
+  width:960px;
+  background-color: #fff;
+  box-shadow: 3px 3px 25px -1px #C6BAC0;
+  position: absolute;
+  bottom:384px;
+  left:50%;
+  margin-left:-480px;
+  z-index: 99;
+  display: none;
+}
+.map-popup iframe {
+  width:960px;
+  height: 559px;
+}
+.popup-close {
+  border:none;
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  width:55px;
+  height: 55px;
+  background-image: url(../img/modal-close.svg);
+  z-index: 199;
+  top:22px;
+  right:22px;
+  opacity: 0.5;
+}
+.popup-close:hover,
+.popup-close:focus {
+  opacity: 1;
+}
+.map-popup-close:active {
+  opacity: 0.5;
+}
+.contact-popup {
+  width:960px;
+  height:554px;
+  box-shadow: 3px 3px 25px -1px #C6BAC0;
+  box-sizing: border-box;
+  left:50%;
+  margin-left:-480px;
+  z-index: 99;
+  position: fixed;
+  bottom:50%;
+  margin-bottom:-277px;
+  background-color: #fff;
+  display:none;
+}
+.popup-form {
+  padding:0 100px;
+  padding-top: 100px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popup-form label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size:18px;
+  font-weight:800;
+  line-height:24px;
+  padding-bottom:10px;
+}
+.popup-input-wrapper {
+  width:360px;
+}
+.popup-input-wrapper input {
+  width:360px;
+  height:50px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  margin-top:10px;
+  margin-bottom:25px;
+  font:inherit;
+  background-color: #f2f2f2;
+  border: none;
+}
+.popup-form input:not(:placeholder-shown):invalid {
+  outline:1px solid #e74246;
+  color: #e74246;
+}
+.popup-textarea-wrapper textarea {
+  width:760px;
+  height: 156px;
+  margin-top:10px;
+  margin-bottom:40px;
+  padding-left: 20px;
+  padding-top:15px;
+  box-sizing: border-box;
+  font:inherit;
+  background-color: #f2f2f2;
+  border: none;
+}
+.button-popup {
+  margin-right: auto;
+  width:200px;
+}
+.popup-show {
+  display:block;
 }
